@@ -10,8 +10,30 @@ body{
     width: 25%
 }
 #produtos{
+    align-items: center;
     margin: 20px;
     padding: 20px;
+    border-radius: 12px;
     background-color: blanchedalmond;
     width: 75%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; 
+    align-content: start;
+}
+
+.btnRemove-estilo{
+    background-color: brown;
+    width: 220px;
+    height: 25px;
+    margin: 10px;
+    color: aliceblue;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+.divCard-estilo{
+    padding: 50px;
+    background-color: aliceblue;
+    border-radius: 8px;
 }
