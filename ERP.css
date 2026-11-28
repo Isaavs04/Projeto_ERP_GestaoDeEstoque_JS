@@ -1,9 +1,16 @@
-body{
+body {
+    margin: 0;
+    min-height: 100vh;
     display: flex;
     flex-direction: row;
-    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    /*Backgroun pontilhado*/
+    background: #566763 radial-gradient(rgba(255, 255, 255, 0.712) 10%, transparent 1%);
+    background-size: 11px 11px;
 }
-#cadastro{
+
+#cadastro {
     color: #354531;
     margin: 20px;
     padding: 65px;
@@ -14,17 +21,20 @@ body{
     height: 60%;
     box-shadow: 1px 4px 15px 4px rgba(0, 0, 0, 0.2);
 }
-#marca{
+
+#marca {
     display: flex;
     flex-direction: row;
     font-weight: bolder;
     margin-bottom: 20px;
 }
-#logo{
+
+#logo {
     transform: scaleX(-1);
     margin-right: 30px;
 }
-#btnCadastrar{
+
+#btnCadastrar {
     padding: 15px;
     width: 82%;
     border-radius: 10px;
@@ -32,7 +42,8 @@ body{
     background-color: #354531;
     transition: 0.8s ease;
 }
-#btnCadastrar:hover{
+
+#btnCadastrar:hover {
     padding: 15px;
     width: 82%;
     border-radius: 10px;
@@ -41,14 +52,16 @@ body{
     background-color: #c7d5c3;
     box-shadow: 2px 2px 10px #c7d5c3;
 }
-input{
+
+input {
     border-radius: 6px;
     width: 80%;
     height: 25px;
     margin-top: 10px;
     margin-bottom: 20px;
 }
-select{
+
+select {
     background-color: white;
     color: #354531;
     border-radius: 6px;
@@ -57,23 +70,28 @@ select{
     margin-top: 10px;
     margin-bottom: 20px;
 }
-input:focus{
-    border: 1px solid #566763 ;
+
+input:focus {
+    border: 1px solid #566763;
 }
-#produtos{
+
+#produtos {
     align-items: center;
     margin: 20px;
     padding: 20px;
     border-radius: 12px;
-    background-color: blanchedalmond;
+    background-color: white;
     width: 75%;
+    height: 85vh;
+    overflow-y: auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 20px; 
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
     align-content: start;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.504);
 }
 
-.btnRemove-estilo{
+.btnRemove-estilo {
     background-color: brown;
     width: 220px;
     height: 25px;
@@ -83,134 +101,121 @@ input:focus{
     border-radius: 4px;
 }
 
-.divCard-estilo{
+.divCard-estilo {
     padding: 50px;
     background-color: aliceblue;
     border-radius: 8px;
 }
 
 
-/* From Uiverse.io by Yaya12085 */ 
+/* From Uiverse.io by Yaya12085 */
 .radio-inputs {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 350px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 350px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-.radio-inputs > * {
-  margin: 6px;
+.radio-inputs>* {
+    margin: 6px;
 }
 
-.radio-input:checked + .radio-tile {
-  border-color: #354531;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  color: #354531;
+.radio-input:checked+.radio-tile {
+    border-color: #354531;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    color: #354531;
 }
 
-.radio-input:checked + .radio-tile:before {
-  transform: scale(1);
-  opacity: 1;
-  background-color: #354531;
-  border-color: #354531;
+.radio-input:checked+.radio-tile:before {
+    transform: scale(1);
+    opacity: 1;
+    background-color: #354531;
+    border-color: #354531;
 }
 
-.radio-input:checked + .radio-tile .radio-icon svg {
-  fill: #354531;
+.radio-input:checked+.radio-tile .radio-icon svg {
+    fill: #354531;
 }
 
-.radio-input:checked + .radio-tile .radio-label {
-  color: #354531;
+.radio-input:checked+.radio-tile .radio-label {
+    color: #354531;
 }
 
-.radio-input:focus + .radio-tile {
-  border-color: #354531;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px #b5c9fc;
+.radio-input:focus+.radio-tile {
+    border-color: #354531;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px #b5c9fc;
 }
 
-.radio-input:focus + .radio-tile:before {
-  transform: scale(1);
-  opacity: 1;
+.radio-input:focus+.radio-tile:before {
+    transform: scale(1);
+    opacity: 1;
 }
 
 .radio-tile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  min-height: 80px;
-  border-radius: 0.5rem;
-  border: 2px solid #b5bfd9;
-  background-color: #fff;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  transition: 0.15s ease;
-  cursor: pointer;
-  position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    min-height: 80px;
+    border-radius: 0.5rem;
+    border: 2px solid #b5bfd9;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.15s ease;
+    cursor: pointer;
+    position: relative;
 }
 
 .radio-tile:before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 0.75rem;
-  height: 0.75rem;
-  border: 2px solid #b5bfd9;
-  background-color: #fff;
-  border-radius: 50%;
-  top: 0.25rem;
-  left: 0.25rem;
-  opacity: 0;
-  transform: scale(0);
-  transition: 0.25s ease;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0.75rem;
+    height: 0.75rem;
+    border: 2px solid #b5bfd9;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 0.25rem;
+    left: 0.25rem;
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.25s ease;
 }
 
 .radio-tile:hover {
-  border-color: #C7D5C3;
+    border-color: #C7D5C3;
 }
 
 .radio-tile:hover:before {
-  transform: scale(1);
-  opacity: 1;
+    transform: scale(1);
+    opacity: 1;
 }
 
 .radio-icon svg {
-  width: 2rem;
-  height: 2rem;
-  fill: #494949;
+    width: 2rem;
+    height: 2rem;
+    fill: #494949;
 }
 
 .radio-label {
-  color: #707070;
-  transition: 0.375s ease;
-  text-align: center;
-  font-size: 13px;
+    color: #707070;
+    transition: 0.375s ease;
+    text-align: center;
+    font-size: 13px;
 }
 
 .radio-input {
-  clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }
-
-/* From Uiverse.io by escannord */ 
-/*
-.container {
-  width: 100%;
-  height: 100%;
-  /* Add your background pattern here */
-  /*
-  background: rgba(29, 31, 32, 0.904)
-    radial-gradient(rgba(255, 255, 255, 0.712) 10%, transparent 1%);
-  background-size: 11px 11px;
-}
-*/
