@@ -51,6 +51,7 @@ body {
     color: #354531;
     background-color: #c7d5c3;
     box-shadow: 2px 2px 10px #c7d5c3;
+    cursor: pointer;
 }
 
 input {
@@ -79,8 +80,10 @@ input:focus {
     align-items: center;
     margin: 20px;
     padding: 20px;
-    border-radius: 12px;
-    background-color: white;
+    border-radius: 20px;
+    background-image: url(/img/produtosBackground.jpg);
+    background-size: 500px;
+    border-image-repeat: repeat;
     width: 75%;
     height: 85vh;
     overflow-y: auto;
@@ -91,20 +94,40 @@ input:focus {
     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.504);
 }
 
-.btnRemove-estilo {
-    background-color: brown;
-    width: 220px;
-    height: 25px;
-    margin: 10px;
-    color: aliceblue;
-    border: 1px solid white;
-    border-radius: 4px;
-}
-
 .divCard-estilo {
-    padding: 50px;
-    background-color: aliceblue;
-    border-radius: 8px;
+    padding: 10px;
+    border: 2px solid #354531;
+    color: #354531;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 8px 8px #354531;
+}
+.ttCard{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    font-size: large;
+    border-radius: 10px;
+    padding: 10px;
+    color: black;
+    background-color: #A2A5C7;
+    text-align: center;
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.471);
+}
+.elementsCard{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    font-size: medium;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #C7D5C3;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.422);
+    transition: 0.5s ease;
+}
+.elementsCard:hover{
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.422);
+    transform: scale(1.05); 
+    color: #C7D5C3;
+    background-color: #566763;
 }
 
 
@@ -218,4 +241,62 @@ input:focus {
     position: absolute;
     white-space: nowrap;
     width: 1px;
+}
+
+
+/* From Uiverse.io by vinodjangid07 */ 
+.button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  transition-duration: .3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: .3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.button:hover {
+  width: 100%;
+  border-radius: 50px;
+  transition-duration: .3s;
+  background-color: rgb(255, 69, 69);
+  align-items: center;
+}
+
+.button:hover .svgIcon {
+  width: 50px;
+  transition-duration: .3s;
+  transform: translateY(60%);
+}
+
+.button::before {
+  position: absolute;
+  top: -20px;
+  content: "Delete";
+  color: white;
+  transition-duration: .3s;
+  font-size: 2px;
+}
+
+.button:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(30px);
+  transition-duration: .3s;
 }
